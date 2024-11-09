@@ -11,6 +11,8 @@ public class SecondLargest {
             arr[i] = sc.nextInt();
         }
 
+        sc.close();
+
         if (n < 2) {
             System.out.println("Second Largest element in array is: " + -1);
             System.exit(0);

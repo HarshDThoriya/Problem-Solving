@@ -7,11 +7,12 @@ public class ArmstrongNumbers {
         Scanner sc = new Scanner(System.in);
 
         n = sc.nextInt();
-
+        sc.close();
+        
         int tempN = n;
 
         int digitsInN = (int) (Math.log10(n) + 1);
-        
+
         int sum = 0;
 
         while(tempN>0){

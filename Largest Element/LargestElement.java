@@ -11,6 +11,8 @@ public class LargestElement {
             arr[i] = sc.nextInt();
         }
 
+        sc.close();
+
         int max = -1;
 
         for(int i=0; i<n; i++){

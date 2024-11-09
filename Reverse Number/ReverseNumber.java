@@ -6,6 +6,8 @@ public class ReverseNumber {
         Scanner scanner = new Scanner(System.in);
         n = scanner.nextInt();
 
+        scanner.close();
+
         int reverseN = 0;
         while(n>0){
             reverseN = reverseN * 10 + n%10;

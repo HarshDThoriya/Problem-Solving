@@ -7,6 +7,8 @@ public class CountDigits {
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
 
+        sc.close();
+
         int numOfDigitsInN = (int) (Math.log10(n) + 1);
 
         System.out.println(numOfDigitsInN);

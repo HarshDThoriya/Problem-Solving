@@ -6,6 +6,8 @@ public class CheckPalindrome {
         Scanner scanner = new Scanner(System.in);
         n = scanner.nextInt();
 
+        scanner.close();
+
         int tempN = n;
         int reverseN = 0;
         while(tempN>0){
