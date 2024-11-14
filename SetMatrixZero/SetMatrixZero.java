@@ -4,8 +4,8 @@ import java.util.*;
 
 public class SetMatrixZero {
     static ArrayList<ArrayList<Integer>> zeroMatrix(ArrayList<ArrayList<Integer>> matrix, int n, int m) {
-        int[] row = new int[n]; 
-        int[] col = new int[m]; 
+        int[] row = new int[n];
+        int[] col = new int[m];
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
@@ -48,4 +48,3 @@ public class SetMatrixZero {
         }
     }
 }
-
