@@ -6,6 +6,8 @@ public class RemoveStars {
 
         String s = sc.nextLine();
 
+        sc.close();
+
         Stack<Character> stack = new Stack<>();
 
         StringBuilder sb = new StringBuilder("");
