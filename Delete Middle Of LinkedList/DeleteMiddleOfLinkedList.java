@@ -39,6 +39,7 @@ public class DeleteMiddleOfLinkedList {
             current = current.next;
         }
 
+        sc.close();
 
         linkedList slow = head;
         linkedList fast = head;

@@ -40,6 +40,8 @@ public class MaximumTwinSumOfLinkedList {
             current = current.next;
         }
 
+        sc.close();
+
         if (head == null || head.next == null) {
             System.out.println("null");
         }

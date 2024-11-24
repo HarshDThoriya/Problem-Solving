@@ -39,6 +39,8 @@ public class ReverseLinkedList {
             current = current.next;
         }
 
+        sc.close();
+
 
         linkedList prev = null;
         

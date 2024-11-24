@@ -39,6 +39,8 @@ public class FindMiddleOfLinkedList {
             current = current.next;
         }
 
+        sc.close();
+
         linkedList tempHead = head;
 
         while (tempHead != null) {
