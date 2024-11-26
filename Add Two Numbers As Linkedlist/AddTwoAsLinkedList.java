@@ -53,6 +53,8 @@ public class AddTwoAsLinkedList {
             l2.next = new linkedList(num);
             l2 = l2.next;
         }
+        
+        sc.close();
 
         l1 = headOfl1;
         l2 = headOfl2;
