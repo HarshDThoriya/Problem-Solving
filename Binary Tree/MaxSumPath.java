@@ -13,19 +13,19 @@ class Node {
 }
 
 public class MaxSumPath {
-    static int max = 0;
+    static int max = Integer.MIN_VALUE;
 
     static int maxPathSum(Node root) {
         if (root == null) {
             return 0;
         }
 
-        int lSum = maxPathSum(root.left);
-        int rSum = maxPathSum(root.right);
+        int lSum = Math.max(0,maxPathSum(root.left));
+        int rSum = Math.max(0, maxPathSum(root.right));
 
         max = Math.max(max, lSum + rSum + root.data);
 
-        return (Math.max(rSum, lSum) + (root.data > 0 ? root.data : 0));
+        return (Math.max(rSum, lSum) + (root.data));
     }
 
     public static void main(String[] args) {
@@ -40,11 +40,15 @@ public class MaxSumPath {
         // root.right.right.left = new Node(9);
         // root.right.right.right = new Node(10);
 
-        Node root = new Node(-10);
-        root.left = new Node(9);
-        root.right = new Node(20);
-        root.right.left = new Node(15);
-        root.right.right = new Node(7);
+        // Node root = new Node(-10);
+        // root.left = new Node(9);
+        // root.right = new Node(20);
+        // root.right.left = new Node(15);
+        // root.right.right = new Node(7);
+
+        Node root = new Node(1);
+        root.left  = new Node(2);
+        root.right = new Node(3);
 
         maxPathSum(root);
 
