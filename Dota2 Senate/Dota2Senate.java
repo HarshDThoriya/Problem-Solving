@@ -5,12 +5,13 @@ public class Dota2Senate {
         Scanner sc = new Scanner(System.in);
 
         String senate = sc.nextLine();
+        sc.close();
 
         Queue<Character> que= new LinkedList<>();
         for(int i=0;i<senate.length();i++){
             que.add(senate.charAt(i));
-            
         }
+
         int r=0;
         int d=0;
         while(que.size()>1){
