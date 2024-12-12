@@ -13,8 +13,8 @@ class Node {
 }
 
 public class IdenticalOrNot {
-    static Queue<Node> queue1 = new LinkedList();
-    static Queue<Node> queue2 = new LinkedList();
+    static Queue<Node> queue1 = new LinkedList<>();
+    static Queue<Node> queue2 = new LinkedList<>();
 
 
     static boolean identicalOrNot(Node root1, Node root2){
