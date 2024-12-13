@@ -13,7 +13,7 @@ class Node {
 }
 
 public class Ceil {
-
+    static int ans = -1;
     static int ceil(Node root, int element) {
         int ceil = -1;
         if (root.data == element) {
@@ -31,6 +31,25 @@ public class Ceil {
         }
 
         return ceil;
+    }
+
+    static void ceilRecursive(Node root, int element){
+        if(root == null){
+            return;
+        }
+
+        if(root.data == element){
+            ans = root.data;
+            return;
+        }
+
+        if(root.data > element){
+            ans = root.data;
+            ceilRecursive(root.left, element);
+        }
+        else{
+            ceilRecursive(root.right, element);
+        }
     }
 
     public static void main(String[] args) {
@@ -55,5 +74,8 @@ public class Ceil {
         } else {
             System.out.println("Ceiling: " + ceil);
         }
+
+        ceilRecursive(root,element);
+        System.out.println(ans);
     }
 }
