@@ -14,13 +14,10 @@ class Node {
 
 public class Floor {
 
+    static int ans = -1;
+
     static int floor(Node root, int element) {
         int floor = -1;
-
-        if(root.data == element){
-            floor = root.data;
-            return floor;
-        }
 
         while(root != null){
             if(root.data < element){
@@ -33,6 +30,20 @@ public class Floor {
         }
 
         return floor;
+    }
+
+    static void floorRecursive(Node root, int element){
+        if(root == null){
+            return;
+        }
+
+        if(root.data < element){
+            ans = root.data;
+            floorRecursive(root.right, element);
+        }
+        else{
+            floorRecursive(root.left, element);
+        }
     }
 
     public static void main(String[] args) {
@@ -57,5 +68,8 @@ public class Floor {
         } else {
             System.out.println("Floor: " + floor);
         }
+
+        floorRecursive(root, element);
+        System.out.println(ans);
     }
 }
