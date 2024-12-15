@@ -1,0 +1,50 @@
+import java.util.*;
+
+public class NumberOfProvinces {
+    static boolean[] visited = new boolean[3];
+    static int count = 0;
+    static ArrayList<ArrayList<Integer> > adj = new ArrayList<ArrayList<Integer> >();
+
+    static int province(int index){
+        Queue<Integer> queue = new LinkedList<>();
+
+        queue.add(index);
+        visited[index] = true;
+
+        while(!queue.isEmpty()){
+            index = queue.poll();
+
+            for(int i=0; i<adj.get(index).size(); i++){
+                if(adj.get(index).get(i) == 1 && visited[i] == false){
+                    queue.add(i);
+                    visited[i] = true;
+                }
+            }
+        }
+        count++;
+        return 1;
+    }
+
+    public static void main(String[] args) {
+        adj.add(new ArrayList<Integer>());
+        adj.get(0).add(0, 1);
+        adj.get(0).add(1, 0);
+        adj.get(0).add(2, 0);
+        adj.add(new ArrayList<Integer>());
+        adj.get(1).add(0, 0);
+        adj.get(1).add(1, 1);
+        adj.get(1).add(2, 0);
+        adj.add(new ArrayList<Integer>());
+        adj.get(2).add(0, 0);
+        adj.get(2).add(1, 0);
+        adj.get(2).add(2, 1);
+
+        for(int i=0; i<visited.length; i++){
+            if(visited[i] == false){
+                province(i);
+            }
+        }
+        
+        System.out.println(count);
+    }
+}
