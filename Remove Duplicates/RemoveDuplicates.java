@@ -12,13 +12,21 @@ public class RemoveDuplicates {
         }
 
         sc.close();
-        int currentStop = 0;
 
-        for(int i=0; i<n; i++){
-            if(arr[i] != arr[currentStop]){
-                currentStop++;
-                arr[currentStop] = arr[i];
+        int  i=0;
+        for(int j=1; j<n; j++){
+            if(arr[j] == arr[j-1]){
+                continue;
             }
+            else{
+                i++;
+                arr[i] = arr[j];
+            }
+        }
+        System.out.println(i+1);
+
+        for(int k =0; k<i+1; k++){
+            System.out.println(arr[k]);
         }
     }    
 }
