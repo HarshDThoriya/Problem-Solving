@@ -1,6 +1,6 @@
 package Strings;
 
-public class SubstringsWIthKDistinct {
+public class SumOfBeautyOfAllSubstrings {
     public static void main(String[] args) {
         String s = "aabcb";
 
