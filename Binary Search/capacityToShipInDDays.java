@@ -9,7 +9,7 @@ public class capacityToShipInDDays {
                 maxDays--;
                 currentWeightOfShipTemp = currentWeightOfShip;
             }
-            System.out.println(currentWeightOfShipTemp + " " + maxDays);
+            
             currentWeightOfShipTemp -= weights[i];
 
             if (maxDays <= 0) {
